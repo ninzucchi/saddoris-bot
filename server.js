@@ -2,7 +2,7 @@ const https = require("https");
 const twilio = require("twilio");
 const express = require("express");
 
-const USERNAME = "substack12345";
+const USERNAME = "substack";
 
 const TWILIO_ACCOUNT_SID = process.env.TWILIO_ACCOUNT_SID;
 const TWILIO_AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN;
