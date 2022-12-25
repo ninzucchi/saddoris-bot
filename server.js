@@ -4,10 +4,10 @@ const express = require("express");
 
 const USERNAME = "substack12345";
 
-const TWILIO_ACCOUNT_SID = "AC258e9f612a96ca857724bc1dfbcf4d4d";
-const TWILIO_AUTH_TOKEN = "6129755a558419685ca2f668c776ccb1";
-const TWILIO_PHONE_NUMBER = "whatsapp:+14155238886";
-const DESTINATION_PHONE_NUMBER = "whatsapp:+12034499835";
+const TWILIO_ACCOUNT_SID = process.env.TWILIO_ACCOUNT_SID;
+const TWILIO_AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN;
+const TWILIO_PHONE_NUMBER = process.env.TWILIO_PHONE_NUMBER;
+const DESTINATION_PHONE_NUMBER = process.env.DESTINATION_PHONE_NUMBER;
 
 const client = new twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 
