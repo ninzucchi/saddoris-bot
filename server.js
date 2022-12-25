@@ -1,10 +1,10 @@
 const https = require("https");
 const twilio = require("twilio");
 
-const USERNAME = "substack12345";
+const USERNAME = "substack";
 
-const TWILIO_ACCOUNT_SID = "your_sid";
-const TWILIO_AUTH_TOKEN = "your_token";
+const TWILIO_ACCOUNT_SID = "AC258e9f612a96ca857724bc1dfbcf4d4d";
+const TWILIO_AUTH_TOKEN = "6129755a558419685ca2f668c776ccb1";
 const TWILIO_PHONE_NUMBER = "whatsapp:+14155238886";
 const DESTINATION_PHONE_NUMBER = "whatsapp:+12034499835";
 
@@ -41,6 +41,7 @@ function queryAPI() {
             console.log("valid: \x1b[31mfalse\x1b[0m");
           }
           console.log(`reason: ${apiResponse.reason}`);
+          console.log(`---`);
         });
       }
     )
