@@ -1,5 +1,6 @@
 const https = require("https");
 const twilio = require("twilio");
+const express = require("express");
 
 const USERNAME = "substack";
 
@@ -51,3 +52,11 @@ function queryAPI() {
 }
 
 setInterval(queryAPI, 10000);
+
+// Create an express app to listen on a port
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
+});
