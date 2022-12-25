@@ -1,16 +1,17 @@
 const https = require("https");
 const twilio = require("twilio");
 
-const USERNAME = "substack";
+const USERNAME = "substack12345";
 
-const TWILIO_ACCOUNT_SID = "your_account_sid";
-const TWILIO_AUTH_TOKEN = "your_auth_token";
+const TWILIO_ACCOUNT_SID = "your_sid";
+const TWILIO_AUTH_TOKEN = "your_token";
 const TWILIO_PHONE_NUMBER = "whatsapp:+14155238886";
 const DESTINATION_PHONE_NUMBER = "whatsapp:+12034499835";
 
 const client = new twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 
 function queryAPI() {
+  console.log(`query: ${USERNAME}`);
   https
     .get(
       `https://api.twitter.com/i/users/username_available.json?full_name=Jeffery%20Saddoris&suggest=true&username=${USERNAME}`,
@@ -33,9 +34,7 @@ function queryAPI() {
                 from: TWILIO_PHONE_NUMBER,
                 to: DESTINATION_PHONE_NUMBER,
               })
-              .then((message) =>
-                console.log(`Text message sent: ${message.sid}`)
-              )
+              .then((message) => console.log("Text message sent"))
               .catch((error) => console.error(error))
               .done();
           } else {
